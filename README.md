@@ -62,15 +62,9 @@ Contains the `Main` class to execute the program.
 
 ## **Setup Instructions**
 
-### **Step 1: Clone the Repository**
-```bash
-$ git clone https://github.com/yourusername/auction-system.git
-```
-
-### **Step 2: Import into NetBeans**
+### **Step 2: Import project into NetBeans**
 1. Open NetBeans.
 2. Go to `File > Open Project`.
-3. Select the cloned repository folder and click `Open`.
 
 ### **Step 3: Run the Application**
 1. Right-click on the `Main` class in the `main` package.
