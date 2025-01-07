@@ -71,6 +71,73 @@ Contains the `Main` class to execute the program.
 2. Select `Run File`.
 
 ---
+# Project Architecture
+
+The project follows the **Layered Architecture** (also known as N-Tier Architecture):
+
+---
+
+## 1. Presentation Layer
+
+- **Role**:  
+  Handles user interactions and acts as an entry point to the system.
+
+- **Implementation**:  
+  The `Main` class in the `main` package simulates interactions, such as starting auctions, placing bids, and notifying users.
+
+---
+
+## 2. Controller Layer
+
+- **Role**:  
+  Acts as an intermediary between the presentation layer and the business logic. It ensures that user inputs are processed correctly.
+
+- **Implementation**:  
+  - `AuctionController`: Handles auction-related interactions like starting or closing auctions and placing bids.  
+  - `NotificationController`: Manages sending notifications to users.
+
+---
+
+## 3. Business Logic Layer (Service Layer)
+
+- **Role**:  
+  Contains the core functionality and rules of the application.
+
+- **Implementation**:  
+  - `AuctionService`: Manages auction operations such as starting, closing, and bid processing.  
+  - `NotificationService`: Handles the creation and sending of notifications.
+
+---
+
+## 4. Data Layer (Model Layer)
+
+- **Role**:  
+  Represents the core entities and manages data storage.
+
+- **Implementation**:  
+  Classes such as `User`, `Artwork`, `Auction`, `Bid`, and `Notification` in the `models` package define the structure of the data and relationships between entities.
+
+---
+
+## Advantages of Layered Architecture
+
+1. **Separation of Concerns**:  
+   Each layer is responsible for a specific aspect of the system, making the codebase easier to understand and maintain.
+
+2. **Scalability**:  
+   The architecture allows for adding new features or modifying existing ones without impacting other layers.
+
+3. **Testability**:  
+   Each layer can be independently tested, improving the quality and reliability of the system.
+
+4. **Reusability**:  
+   The services and models can be reused across different parts of the application or other projects.
+
+
+
+
+
+
 
 ## **Usage**
 
@@ -93,7 +160,6 @@ Users can register and log in using the `User` class methods.
 
 ---
 
-## **Code Example**
 
 ### **Main.java**
 ```java
